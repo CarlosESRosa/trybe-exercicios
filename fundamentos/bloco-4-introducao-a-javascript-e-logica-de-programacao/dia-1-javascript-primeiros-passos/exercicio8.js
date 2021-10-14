@@ -1,16 +1,11 @@
-const angulo1 = 60;
-const angulo2 = 60;
-const angulo3 = 60;
-var soma = 0;
+const num1 = 1;
+const num2 = 1;
+const num3 = 2;
 
-console.log(testaTriangulo(angulo1, angulo3, angulo3));
+console.log(pickPar(num1, num2, num3));
 
-function testaTriangulo (angulo1, angulo2, angulo3){
-    if(angulo1 <= 0 || angulo2 <= 0 || angulo3 <= 0){
-        return 'erro';
-    }
-    soma = angulo1 + angulo2 + angulo3;
-    if (soma == 180){
+function pickPar(num1, num2, num3){
+    if(num1 % 2 == 0 || num2 % 2 == 0 || num3 % 2 == 0){
         return true;
     }
     else {
