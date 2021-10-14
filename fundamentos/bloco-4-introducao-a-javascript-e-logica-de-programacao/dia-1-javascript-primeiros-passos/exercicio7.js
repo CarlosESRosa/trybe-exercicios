@@ -1,19 +1,27 @@
-const angulo1 = 60;
-const angulo2 = 60;
-const angulo3 = 60;
-var soma = 0;
+const nota = -10;
 
-console.log(testaTriangulo(angulo1, angulo3, angulo3));
+console.log(testaNota(nota));
 
-function testaTriangulo (angulo1, angulo2, angulo3){
-    if(angulo1 <= 0 || angulo2 <= 0 || angulo3 <= 0){
-        return 'erro';
+function testaNota(nota){
+    if( nota < 0 || nota > 100) {
+        return 'Erro';
     }
-    soma = angulo1 + angulo2 + angulo3;
-    if (soma == 180){
-        return true;
+    if(nota >= 90){
+        return 'A';
+    }
+    else if(nota >= 80){
+        return 'B';
+    }
+    else if(nota >= 70){
+        return 'C';
+    }
+    else if(nota >= 60){
+        return 'D';
+    }
+    else if(nota >= 50){
+        return 'E';
     }
     else {
-        return false;
+        return 'F';
     }
 }
