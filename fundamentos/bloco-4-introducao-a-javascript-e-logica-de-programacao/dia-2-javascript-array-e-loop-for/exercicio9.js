@@ -1,8 +1,9 @@
-let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let arrayVazio = [];
 
-imprimeValores(numbers);
-function imprimeValores(array){
-    for(var i = 0; i < array.length; i++){
-        console.log(array[i]);
+function preencheArray (array){
+    for(var i = 1; i <= 25; i++){
+        array.push(i/2);
     }
+    return array;
 }
+console.log(preencheArray(arrayVazio));
