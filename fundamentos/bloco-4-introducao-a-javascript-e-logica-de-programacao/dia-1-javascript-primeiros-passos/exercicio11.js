@@ -1,19 +1,42 @@
-const angulo1 = 60;
-const angulo2 = 60;
-const angulo3 = 60;
-var soma = 0;
+const salarioBruto = 3000;
 
-console.log(testaTriangulo(angulo1, angulo3, angulo3));
+function inss (salarioBruto){
+    var salarioInss = 0;
 
-function testaTriangulo (angulo1, angulo2, angulo3){
-    if(angulo1 <= 0 || angulo2 <= 0 || angulo3 <= 0){
-        return 'erro';
+    if(salarioBruto <= 1556.94){
+        salarioInss = salarioBruto - ((8/100)*salarioBruto)
     }
-    soma = angulo1 + angulo2 + angulo3;
-    if (soma == 180){
-        return true;
+    else if(salarioBruto <= 2594.92){
+        salarioInss = salarioBruto - ((9/100)*salarioBruto)
+    }
+    else if(salarioBruto <= 5189.82){
+        salarioInss = salarioBruto - ((11/100)*salarioBruto)
     }
     else {
-        return false;
+        salarioInss = salarioBruto - 570.88;
     }
+    return salarioInss;
 }
+
+function impostoDeRenda (salarioInss){
+    salarioLiquido = salarioInss;
+
+    if(salarioInss <= 1903.98){
+        salarioLiquido = salarioLiquido;
+    }
+    else if(salarioInss <= 2826.65){
+        salarioLiquido = salarioLiquido - (((7.5/100)*salarioInss) - 142.80);
+    }
+    else if(salarioInss <= 3751.05){
+        salarioLiquido = salarioLiquido - (((15/100)*salarioInss) - 354.80);
+    }
+    else if(salarioInss <= 4664.68){
+        salarioLiquido = salarioLiquido - (((22.5/100)*salarioInss) - 636.13);
+    }
+    else {
+        salarioLiquido = salarioLiquido - (((27.5/100)*salarioInss) - 869.36);
+    }
+    return salarioLiquido;
+}
+
+console.log('Salário Liquido R$', impostoDeRenda(inss(salarioBruto)));
