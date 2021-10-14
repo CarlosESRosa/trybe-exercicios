@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Source Code Pro", monospace;
+  color: #dbfff3;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* profile-box*/
+.profile-box {
+  background-color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+  margin: auto;
+  margin-top: 100px;
+  padding: 3rem;
+  display: block;
+  width: 500px;
+  border-radius: 50px;
+  color: white;
+}
+
+.profile-box img {
+  width: 300px;
+  margin: 0px auto 2rem;
+  border-radius: 25px;
+}
+
+.profile-box h3 {
+  margin: 20px auto;
+}
+
+.profile-box table {
+  margin: 0px auto; /*table align center*/
+}
+
+.profile-box .table-1 a {
+  font-size: 25px;
+  padding: 0 30px;
+  color: #ac99f2;
+  text-decoration: none;
+}
+
+.profile-box table img {
+  width: 110px;
+  padding: 0 50px;
+  margin-top: 30px;
+}
+/*END profile-box*/
+
+/* skills-box*/
+.skills-box {
+  background-color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+  margin: auto;
+  margin-top: 60px;
+  padding: 3rem;
+  display: block;
+  max-width: 886px;
+  border-radius: 50px;
+}
+
+.skills-box h1 {
+  margin-bottom: 30px;
+  color: #7e7cd9;
+}
+
+.skills-box img {
+  width: 400px;
+}
+
+.skills-box table {
+  margin-bottom: 50px;
+  text-align: left;
+  color: #c3bfff;
+}
+.skills-box table th {
+  padding: 0 15px;
+}
+/*END skills-box*/
+
+footer {
+  margin-top: 30vh;
+  margin-bottom: 30vh;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.9);
+}
