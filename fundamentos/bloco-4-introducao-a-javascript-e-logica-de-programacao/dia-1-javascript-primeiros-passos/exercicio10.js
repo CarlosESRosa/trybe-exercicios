@@ -1,19 +1,13 @@
-const angulo1 = 60;
-const angulo2 = 60;
-const angulo3 = 60;
-var soma = 0;
+const custo = 10;
+const valorVenda = 20;
 
-console.log(testaTriangulo(angulo1, angulo3, angulo3));
+console.log(lucroPorMil(custo, valorVenda));
 
-function testaTriangulo (angulo1, angulo2, angulo3){
-    if(angulo1 <= 0 || angulo2 <= 0 || angulo3 <= 0){
+function lucroPorMil(custo, venda){
+    if(custo < 0 || venda < 0){
         return 'erro';
     }
-    soma = angulo1 + angulo2 + angulo3;
-    if (soma == 180){
-        return true;
-    }
-    else {
-        return false;
-    }
+    var imposto = ((custo/100)*20);
+    var lucro = venda - (custo + imposto);
+    return lucro*1000;
 }
