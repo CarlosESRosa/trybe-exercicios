@@ -2,7 +2,7 @@ const n = 6;
 
 console.log(somaValoresArray(n));
 
-function somaValoresArray(num) {
+function somaValores(num) {
   var soma = 0;
 
   for (var i = 0; i <= num; i++) {
