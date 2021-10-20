@@ -15,3 +15,9 @@ function changeColorCenterBox() {
   document.getElementsByClassName("center-content")[0].style.backgroundColor =
     "white";
 }
+
+changeH1();
+function changeH1() {
+  document.getElementsByTagName("h1")[0].innerText =
+    "Exercício 5.1 - JavaScript";
+}
