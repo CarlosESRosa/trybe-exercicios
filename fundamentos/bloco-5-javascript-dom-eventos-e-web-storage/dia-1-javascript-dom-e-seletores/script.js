@@ -21,3 +21,15 @@ function changeH1() {
   document.getElementsByTagName("h1")[0].innerText =
     "Exercício 5.1 - JavaScript";
 }
+
+toCapital();
+function toCapital() {
+  //pega o tamanho do documento
+  var length = document.getElementsByTagName("p").length;
+
+  for (var i = 0; i < length; i++) {
+    //acessa o p na posicao i
+    var x = (document.getElementsByTagName("p")[i].style.textTransform =
+      "uppercase");
+  }
+}
