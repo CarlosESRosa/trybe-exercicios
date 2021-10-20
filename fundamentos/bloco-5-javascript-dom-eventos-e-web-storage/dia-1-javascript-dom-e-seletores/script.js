@@ -33,3 +33,13 @@ function toCapital() {
       "uppercase");
   }
 }
+
+consoleLogP();
+function consoleLogP() {
+  var length = document.getElementsByTagName("p").length;
+  for (var i = 0; i < length; i++) {
+    //acessa o p na posicao i
+    var x = document.getElementsByTagName("p")[i].innerHTML;
+    console.log(x);
+  }
+}
