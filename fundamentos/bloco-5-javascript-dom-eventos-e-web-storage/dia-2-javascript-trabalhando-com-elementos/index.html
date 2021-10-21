@@ -57,10 +57,17 @@
     </head>
     <body>
         <script>
+            //criando o H1
             let bodyTag = document.querySelector('body'); // salva a tag body na variavel bodyTag
+
             let firstH1 = document.createElement('h1'); // cria um elemento h1
             firstH1.innerText = 'Exercício 5.2 - JavaScript DOM'; // atribui valor ao meu elemento h1
             bodyTag.appendChild(firstH1); // faz do elemento firstH1 se tornar um filho de body
-    </script>
+
+            let main = document.createElement('main'); 
+            main.className = 'main-content';
+            bodyTag.appendChild(main);
+            
+  </script>
     </body>
 </html>
