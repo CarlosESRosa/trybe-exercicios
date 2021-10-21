@@ -62,6 +62,7 @@
 
             let firstH1 = document.createElement('h1'); // cria um elemento h1
             firstH1.innerText = 'Exercício 5.2 - JavaScript DOM'; // atribui valor ao meu elemento h1
+            firstH1.className = 'title';
             bodyTag.appendChild(firstH1); // faz do elemento firstH1 se tornar um filho de body
 
             let main = document.createElement('main'); 
@@ -101,16 +102,20 @@
             sectionRight.appendChild(unorderedList);
 
             let firstH3 = document.createElement('h3');
-            firstH3.innerText = 'Primeiro h3'
+            firstH3.innerText = 'Primeiro H3'
+            firstH3.className = 'description';
+
             main.appendChild(firstH3);
 
             let secondH3 = document.createElement('h3');
-            secondH3.innerText = 'Segundo h3'
+            secondH3.innerText = 'Segundo H3'
+            secondH3.className = 'description';
             main.appendChild(secondH3);
 
-            let third3 = document.createElement('h3');
-            third3.innerText = 'Terceiro h3'
-            main.appendChild(third3);
+            let thirdH3 = document.createElement('h3');
+            thirdH3.innerText = 'Terceiro H3'
+            thirdH3.className = 'description';
+            main.appendChild(thirdH3);
   </script>
     </body>
 </html>
