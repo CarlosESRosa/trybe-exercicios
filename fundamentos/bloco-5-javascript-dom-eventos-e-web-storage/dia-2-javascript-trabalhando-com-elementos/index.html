@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Exercício 5.2</title>
+        <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+    </head>
+    <body>
+        <script>
+            //criando o H1
+            let bodyTag = document.querySelector('body'); // salva a tag body na variavel bodyTag
+
+            let firstH1 = document.createElement('h1'); // cria um elemento h1
+            firstH1.innerText = 'Exercício 5.2 - JavaScript DOM'; // atribui valor ao meu elemento h1
+            firstH1.className = 'title';
+            bodyTag.appendChild(firstH1); // faz do elemento firstH1 se tornar um filho de body
+
+            let main = document.createElement('main'); 
+            main.className = 'main-content';
+            main.style.backgroundColor = 'green';
+            bodyTag.appendChild(main);
+
+            let section = document.createElement('section');
+            section.className = 'center-content'
+            main.appendChild(section);
+            
+            let paragraph = document.createElement('p');
+            paragraph.innerText = 'Algum texto';
+            section.appendChild(paragraph);
+
+            let sectionLeft = document.createElement('section');
+            sectionLeft.className = 'left-content'
+            main.appendChild(sectionLeft);
+
+            let sectionRight = document.createElement('section'); 
+            sectionRight.className = 'right-content'
+            sectionRight.style.marginRight = 'auto';
+            main.appendChild(sectionRight);
+
+            let image = document.createElement('img');
+            image.className = 'small-image';
+            image.src = 'https://picsum.photos/200'
+            sectionLeft.appendChild(image);
+
+            let unorderedList = document.createElement('ul');//cria uma lista
+            let linhas = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito'];            
+            
+            for(var i = 0; i < linhas.length; i++){
+                let listItem = document.createElement('li');
+                listItem.innerText = linhas[i];
+
+                unorderedList.appendChild(listItem);
+            }
+            sectionRight.appendChild(unorderedList);
+
+            let firstH3 = document.createElement('h3');
+            firstH3.innerText = 'Primeiro H3'
+            firstH3.className = 'description';
+
+            main.appendChild(firstH3);
+
+            let secondH3 = document.createElement('h3');
+            secondH3.innerText = 'Segundo H3'
+            secondH3.className = 'description';
+            main.appendChild(secondH3);
+
+            let thirdH3 = document.createElement('h3');
+            thirdH3.innerText = 'Terceiro H3'
+            thirdH3.className = 'description';
+            main.appendChild(thirdH3);
+
+            main.removeChild(sectionLeft);
+
+  </script>
+    </body>
+</html>
