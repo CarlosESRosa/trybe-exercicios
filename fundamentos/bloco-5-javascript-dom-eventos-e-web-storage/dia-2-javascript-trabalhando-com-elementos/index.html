@@ -88,8 +88,17 @@
             image.className = 'small-image';
             image.src = 'https://picsum.photos/200'
             sectionLeft.appendChild(image);
-            
 
+            let unorderedList = document.createElement('ul');//cria uma lista
+            let linhas = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];            
+            
+            for(var i = 0; i < linhas.length; i++){
+                let listItem = document.createElement('li');
+                listItem.innerText = linhas[i];
+
+                unorderedList.appendChild(listItem);
+            }
+            sectionRight.appendChild(unorderedList);
   </script>
     </body>
 </html>
