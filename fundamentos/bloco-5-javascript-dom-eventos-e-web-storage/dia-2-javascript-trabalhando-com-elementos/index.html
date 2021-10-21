@@ -67,6 +67,7 @@
 
             let main = document.createElement('main'); 
             main.className = 'main-content';
+            main.style.backgroundColor = 'green';
             bodyTag.appendChild(main);
 
             let section = document.createElement('section');
@@ -92,7 +93,7 @@
             sectionLeft.appendChild(image);
 
             let unorderedList = document.createElement('ul');//cria uma lista
-            let linhas = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];            
+            let linhas = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito'];            
             
             for(var i = 0; i < linhas.length; i++){
                 let listItem = document.createElement('li');
