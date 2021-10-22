@@ -36,15 +36,13 @@ function createDaysOfMonth() {
 
     //atribuindo classes
     dayMonthListItem.className = "day";
-    if (daysOfMonth == 24 || daysOfMonth == 25 || daysOfMonth == 31) {
+    if (daysOfMonth == 25) {
+      dayMonthListItem.className = "day friday holiday";
+    }
+    if (daysOfMonth == 24 || daysOfMonth == 31) {
       dayMonthListItem.className = "day holiday";
     }
-    if (
-      daysOfMonth == 4 ||
-      daysOfMonth == 11 ||
-      daysOfMonth == 18 ||
-      daysOfMonth == 25
-    ) {
+    if (daysOfMonth == 4 || daysOfMonth == 11 || daysOfMonth == 18) {
       dayMonthListItem.className = "day friday";
     }
 
@@ -65,3 +63,18 @@ function holidays(string) {
   divButton.appendChild(feriados);
 }
 holidays(feriados);
+
+function clickFeriados() {
+  let btn = document.querySelector("#btn-holiday");
+  let holidays = document.querySelectorAll(".holiday");
+  let selected = false;
+
+  btn.addEventListener("click", function () {
+    for (let i = 0; i < holidays.length; i++) {
+      let color = selected ? "rgb(238,238,238)" : "lightblue"; //Operador ternario, faz o mesmo papel de if else
+      holidays[i].style.backgroundColor = color;
+    }
+    selected = ~selected; //selected muda de false pra true e de true pra false
+  });
+}
+clickFeriados();
