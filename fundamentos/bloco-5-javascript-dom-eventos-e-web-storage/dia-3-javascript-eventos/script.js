@@ -78,3 +78,15 @@ function clickFeriados() {
   });
 }
 clickFeriados();
+
+const sexta = "Sexta-feira";
+function sextaFeira(string) {
+  let btn = document.createElement("button");
+  const divButton = document.querySelector(".buttons-container");
+
+  btn.innerText = sexta;
+  btn.id = "btn-friday";
+
+  divButton.appendChild(btn);
+}
+sextaFeira(sexta);
