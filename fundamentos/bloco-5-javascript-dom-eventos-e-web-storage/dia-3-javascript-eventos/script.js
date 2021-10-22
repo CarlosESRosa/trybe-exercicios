@@ -132,8 +132,19 @@ function addTask(string) {
   var divSpan = document.querySelector(".my-tasks");
 
   span.innerText = myTask;
-  console.log(span);
 
   divSpan.appendChild(span);
 }
 addTask();
+
+var cor = "green";
+function addSubtitle(cor) {
+  var myDiv = document.createElement("div");
+  var divFather = document.querySelector(".my-tasks");
+
+  myDiv.className = "task";
+  myDiv.style.backgroundColor = cor;
+
+  divFather.appendChild(myDiv);
+}
+addSubtitle();
