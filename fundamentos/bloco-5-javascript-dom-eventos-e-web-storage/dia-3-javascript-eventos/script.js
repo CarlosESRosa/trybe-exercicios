@@ -125,3 +125,15 @@ function zoom() {
   }
 }
 zoom();
+
+var myTask = "Codar até o dedo cair";
+function addTask(string) {
+  var span = document.createElement("span");
+  var divSpan = document.querySelector(".my-tasks");
+
+  span.innerText = myTask;
+  console.log(span);
+
+  divSpan.appendChild(span);
+}
+addTask();
