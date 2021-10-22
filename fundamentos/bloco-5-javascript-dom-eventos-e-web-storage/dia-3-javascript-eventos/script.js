@@ -148,3 +148,16 @@ function addSubtitle(cor) {
   divFather.appendChild(myDiv);
 }
 addSubtitle();
+
+function doneTask() {
+  var divTask = document.querySelector(".task");
+  var selected = true;
+
+  divTask.addEventListener("click", function () {
+    let test = selected
+      ? (divTask.className = "task selected")
+      : (divTask.className = "task");
+    selected = !selected;
+  });
+}
+doneTask();
