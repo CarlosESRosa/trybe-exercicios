@@ -54,3 +54,14 @@ function createDaysOfMonth() {
   }
 }
 createDaysOfMonth();
+
+const feriados = "Feriados";
+function holidays(string) {
+  var feriados = document.createElement("button");
+  feriados.innerText = string;
+  feriados.id = "btn-holiday";
+
+  const divButton = document.querySelector(".buttons-container");
+  divButton.appendChild(feriados);
+}
+holidays(feriados);
