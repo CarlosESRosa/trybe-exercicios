@@ -137,7 +137,7 @@ function addTask(string) {
 }
 addTask();
 
-var cor = "green";
+var cor = "magenta";
 function addSubtitle(cor) {
   var myDiv = document.createElement("div");
   var divFather = document.querySelector(".my-tasks");
@@ -147,7 +147,7 @@ function addSubtitle(cor) {
 
   divFather.appendChild(myDiv);
 }
-addSubtitle();
+addSubtitle(cor);
 
 function doneTask() {
   var divTask = document.querySelector(".task");
@@ -161,3 +161,18 @@ function doneTask() {
   });
 }
 doneTask();
+
+function clickDay() {
+  var myDay = document.querySelectorAll(".day");
+  var selected = false;
+
+  for (var i = 0; i < myDay.length; i++) {
+    myDay[i].addEventListener("click", function (event) {
+      let test = selected
+        ? (event.target.style.color = cor)
+        : (event.target.style.color = "rgb(119,119,119)");
+      selected = !selected;
+    });
+  }
+}
+clickDay();
