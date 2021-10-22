@@ -67,14 +67,14 @@ holidays(feriados);
 function clickFeriados() {
   let btn = document.querySelector("#btn-holiday");
   let holidays = document.querySelectorAll(".holiday");
-  let selected = false;
+  var selected = false;
 
   btn.addEventListener("click", function () {
     for (let i = 0; i < holidays.length; i++) {
       let color = selected ? "rgb(238,238,238)" : "lightblue"; //Operador ternario, faz o mesmo papel de if else
       holidays[i].style.backgroundColor = color;
     }
-    selected = ~selected; //selected muda de false pra true e de true pra false
+    selected = !selected; //selected muda de false pra true e de true pra false
   });
 }
 clickFeriados();
@@ -90,3 +90,24 @@ function sextaFeira(string) {
   divButton.appendChild(btn);
 }
 sextaFeira(sexta);
+
+function clickSexta() {
+  let btn = document.querySelector("#btn-friday");
+  var fridays = document.querySelectorAll(".friday");
+  var selected = true;
+  var array = [];
+
+  //pegando os valores de holiday e salvando no array
+  for (var i = 0; i < fridays.length; i++) {
+    array.push(fridays[i].innerText);
+  }
+
+  btn.addEventListener("click", function () {
+    for (var i = 0; i < fridays.length; i++) {
+      let text = selected ? "SEXTOU" : array[i];
+      fridays[i].innerText = text;
+    }
+    selected = !selected;
+  });
+}
+clickSexta();
