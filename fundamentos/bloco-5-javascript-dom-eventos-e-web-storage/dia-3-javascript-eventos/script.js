@@ -111,3 +111,17 @@ function clickSexta() {
   });
 }
 clickSexta();
+
+function zoom() {
+  let btn = document.querySelectorAll(".day");
+
+  for (var i = 0; i < btn.length; i++) {
+    btn[i].addEventListener("mouseover", function (event) {
+      event.target.style.fontSize = "40px";
+    });
+    btn[i].addEventListener("mouseleave", function (event) {
+      event.target.style.fontSize = "20px";
+    });
+  }
+}
+zoom();
