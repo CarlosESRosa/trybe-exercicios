@@ -71,4 +71,7 @@ const menorNome = books.forEach((element) => {
     maior = element.name;
   }
 });
-console.log(maior);
+// console.log(maior);
+
+const firstBook = books.find((element) => element.name.length === 26);
+console.log(firstBook);
