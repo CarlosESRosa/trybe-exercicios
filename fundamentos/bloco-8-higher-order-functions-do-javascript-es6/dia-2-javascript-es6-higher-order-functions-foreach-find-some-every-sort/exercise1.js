@@ -63,4 +63,12 @@ const books = [
 
 // Adicione o código do exercício aqui:
 const found = books.find((element) => element.author.birthYear === 1947);
-console.log(found.author.name);
+// console.log(found.author.name);
+
+let maior = '';
+const menorNome = books.forEach((element) => {
+  if (maior.length < element.name.length) {
+    maior = element.name;
+  }
+});
+console.log(maior);
