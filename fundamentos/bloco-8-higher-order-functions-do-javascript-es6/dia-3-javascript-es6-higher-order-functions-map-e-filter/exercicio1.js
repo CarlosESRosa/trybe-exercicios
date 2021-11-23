@@ -94,4 +94,7 @@ const arrayFilterYearSort = arrayFilterYear.sort(
 // console.log(arrayObjFilter);
 const arrayOnlyName = arrayObjFilter.map((element) => element.author.name);
 const arrayOnlyNameSort = arrayOnlyName.sort();
-console.log(arrayOnlyNameSort);
+// console.log(arrayOnlyNameSort);
+
+const arrayNameFilterYear = arrayFilterYear.map((element) => element.name);
+console.log(arrayNameFilterYear);
