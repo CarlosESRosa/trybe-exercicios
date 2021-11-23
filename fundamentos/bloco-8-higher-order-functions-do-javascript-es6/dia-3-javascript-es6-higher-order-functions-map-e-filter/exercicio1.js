@@ -76,4 +76,11 @@ arrayObj = books.map((element) => {
   };
   return obj;
 });
-console.log(arrayObj);
+// console.log(arrayObj);
+
+let arrayObjFilter;
+arrayObjFilter = books.filter(
+  (element) =>
+    element.genre === 'Ficção Científica' || element.genre === 'Fantasia'
+);
+console.log(arrayObjFilter);
