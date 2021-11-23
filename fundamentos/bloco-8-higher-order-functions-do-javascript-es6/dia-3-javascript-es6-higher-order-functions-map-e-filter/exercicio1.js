@@ -78,16 +78,20 @@ arrayObj = books.map((element) => {
 });
 // console.log(arrayObj);
 
-let arrayObjFilter;
-arrayObjFilter = books.filter(
+const arrayObjFilter = books.filter(
   (element) =>
     element.genre === 'Ficção Científica' || element.genre === 'Fantasia'
 );
 // console.log(arrayObjFilter);
 
-let arrayFilterYear;
-arrayFilterYear = books.filter((element) => 2021 - element.releaseYear >= 60);
-let arrayFilterYearSort = arrayFilterYear.sort(
+const arrayFilterYear = books.filter(
+  (element) => 2021 - element.releaseYear >= 60
+);
+const arrayFilterYearSort = arrayFilterYear.sort(
   (a, b) => a.releaseYear - b.releaseYear
 );
-console.log(arrayFilterYearSort);
+// console.log(arrayFilterYearSort);
+// console.log(arrayObjFilter);
+const arrayOnlyName = arrayObjFilter.map((element) => element.author.name);
+const arrayOnlyNameSort = arrayOnlyName.sort();
+console.log(arrayOnlyNameSort);
