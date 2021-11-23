@@ -91,4 +91,31 @@ function someBookWasReleaseOnThe80s(element) {
   return element.releaseYear >= 1980 && element.releaseYear <= 1989;
 }
 
-console.log(books.some(someBookWasReleaseOnThe80s));
+// console.log(books.some(someBookWasReleaseOnThe80s));
+let birthYearArray = [];
+function createArray(element) {
+  birthYearArray.push(element.author.birthYear);
+}
+books.forEach(createArray);
+
+//console.log(birthYearArray);
+// link de referencia -> https://dev.to/huyddo/find-duplicate-or-repeat-elements-in-js-array-3cl3
+function countDuplicate(birthYearArray) {
+  let counts = {};
+
+  for (let i = 0; i < birthYearArray.length; i += 1) {
+    if (counts[birthYearArray[i]]) {
+      counts[birthYearArray[i]] += 1;
+    } else {
+      counts[birthYearArray[i]] = 1;
+    }
+  }
+  for (let prop in counts) {
+    if (counts[prop] >= 2) {
+      console.log(prop + ' counted: ' + counts[prop] + ' times.');
+      return false;
+    }
+  }
+  return true;
+}
+console.log('my return', countDuplicate(birthYearArray));
