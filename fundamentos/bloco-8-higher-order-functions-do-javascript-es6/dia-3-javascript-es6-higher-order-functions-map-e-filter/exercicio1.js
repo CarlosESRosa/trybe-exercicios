@@ -66,4 +66,14 @@ let arrayString;
 arrayString = books.map((element) => {
   return `${element.name} - ${element.genre} - ${element.author.name}`;
 });
-console.log(arrayString);
+// console.log(arrayString);
+
+let arrayObj;
+arrayObj = books.map((element) => {
+  let obj = {
+    author: element.author.name,
+    age: element.releaseYear - element.author.birthYear,
+  };
+  return obj;
+});
+console.log(arrayObj);
