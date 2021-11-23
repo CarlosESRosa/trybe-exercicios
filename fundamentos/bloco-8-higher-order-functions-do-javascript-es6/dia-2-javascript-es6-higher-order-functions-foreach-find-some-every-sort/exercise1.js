@@ -79,4 +79,10 @@ const firstBook26Char = books.find((element) => element.name.length === 26);
 // console.log(firstBook26Char.name);
 
 const ordemData = books.sort((a, b) => b.releaseYear - a.releaseYear);
-console.log(ordemData);
+// console.log(ordemData);
+
+function everyoneWasBornOnSecXX(element) {
+  return element.author.birthYear >= 1901;
+}
+
+console.log(books.every(everyoneWasBornOnSecXX));
