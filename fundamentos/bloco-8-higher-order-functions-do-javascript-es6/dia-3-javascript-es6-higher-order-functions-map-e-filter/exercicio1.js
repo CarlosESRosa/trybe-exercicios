@@ -97,4 +97,16 @@ const arrayOnlyNameSort = arrayOnlyName.sort();
 // console.log(arrayOnlyNameSort);
 
 const arrayNameFilterYear = arrayFilterYear.map((element) => element.name);
-console.log(arrayNameFilterYear);
+// console.log(arrayNameFilterYear);
+
+// console.log(books);
+const nameIniciais = books.find((element) => {
+  if (
+    element.author.name[1] === '.' &&
+    element.author.name[4] === '.' &&
+    element.author.name[7] === '.'
+  ) {
+    return element.author.name;
+  }
+});
+console.log(nameIniciais.name);
