@@ -83,4 +83,11 @@ arrayObjFilter = books.filter(
   (element) =>
     element.genre === 'Ficção Científica' || element.genre === 'Fantasia'
 );
-console.log(arrayObjFilter);
+// console.log(arrayObjFilter);
+
+let arrayFilterYear;
+arrayFilterYear = books.filter((element) => 2021 - element.releaseYear >= 60);
+let arrayFilterYearSort = arrayFilterYear.sort(
+  (a, b) => a.releaseYear - b.releaseYear
+);
+console.log(arrayFilterYearSort);
