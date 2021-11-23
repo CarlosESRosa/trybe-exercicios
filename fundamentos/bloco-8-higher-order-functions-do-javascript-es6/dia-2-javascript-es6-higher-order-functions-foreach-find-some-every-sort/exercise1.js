@@ -85,4 +85,10 @@ function everyoneWasBornOnSecXX(element) {
   return element.author.birthYear >= 1901;
 }
 
-console.log(books.every(everyoneWasBornOnSecXX));
+// console.log(books.every(everyoneWasBornOnSecXX));
+
+function someBookWasReleaseOnThe80s(element) {
+  return element.releaseYear >= 1980 && element.releaseYear <= 1989;
+}
+
+console.log(books.some(someBookWasReleaseOnThe80s));
