@@ -63,5 +63,13 @@ const books = [
 
 // Adicione o código do exercício aqui:
 
+// Exercicio 2
 const stringNomes = (acc, element) => acc + `${element.author.name}, `;
-console.log(books.reduce(stringNomes, ''));
+// console.log(books.reduce(stringNomes, ''));
+
+// Exercicio 3
+const mediaIdade = (acc, element, index, array) => {
+  acc += element.releaseYear - element.author.birthYear;
+  return acc;
+};
+console.log(books.reduce(mediaIdade, 0) / books.length); // não consegui resolver com a funcão
