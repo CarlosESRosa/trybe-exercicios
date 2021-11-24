@@ -72,4 +72,10 @@ const mediaIdade = (acc, element, index, array) => {
   acc += element.releaseYear - element.author.birthYear;
   return acc;
 };
-console.log(books.reduce(mediaIdade, 0) / books.length); // não consegui resolver com a funcão
+// console.log(books.reduce(mediaIdade, 0) / books.length); // não consegui resolver com a funcão
+
+// Exercicio 4
+const maiorNome = (acc, element) => {
+  return acc.name.length > element.name.length ? acc : element;
+};
+console.log(books.reduce(maiorNome));
