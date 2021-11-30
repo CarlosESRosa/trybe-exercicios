@@ -31,7 +31,7 @@ function getPokemonDetails(filter, callback) {
   }, 2000);
 }
 
-const filterFunction = (pokemon) => pokemon.name === 'Charmander';
+const filterFunction = (pokemon) => pokemon.name === 'Squirtle';
 
 const myCallback = (error, message) => {
   if(error) {
