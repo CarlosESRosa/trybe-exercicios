@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './Form.css'
 
 export default class Form extends Component {
   constructor() {
@@ -77,24 +78,26 @@ export default class Form extends Component {
 
     return (
       <div className='container'>
-        <form className='my-forms bg-light'>
+        <form className='my-forms bg-light '>
           <fieldset style={{ display: this.state.display }}>
-            <input className='form-control' value={this.state.nome.toUpperCase()} type="text" name='nome' maxLength={40} required onChange={this.handleChange} placeholder='Nome' />
-            <input className='form-control' value={this.state.email} type="text" name='email' maxLength={50} required onChange={this.handleChange} placeholder='Email' />
-            <input className='form-control' value={this.state.cpf} type="text" name='cpf' maxLength={11} required onChange={this.handleChange} placeholder='CPF' />
-            <input className='form-control' value={this.state.endereco.replace(/[^\w\s]/gi, '')} type="text" name='endereco' maxLength={200} required onChange={this.handleChange} placeholder='Endereço' />
-            <input className='form-control' value={this.state.cidade} type="text" name='cidade' maxLength={28} required onChange={this.handleChange} onBlur={this.validadeCidade} placeholder='Cidade' />
+            <div id='div-1'>
+              <input className='form-control teste' value={this.state.nome.toUpperCase()} type="text" name='nome' maxLength={40} required onChange={this.handleChange} placeholder='Nome' />
+              <input className='form-control teste' value={this.state.email} type="text" name='email' maxLength={50} required onChange={this.handleChange} placeholder='Email' />
+              <input className='form-control teste' value={this.state.cpf} type="text" name='cpf' maxLength={11} required onChange={this.handleChange} placeholder='CPF' />
+              <input className='form-control teste' value={this.state.endereco.replace(/[^\w\s]/gi, '')} type="text" name='endereco' maxLength={200} required onChange={this.handleChange} placeholder='Endereço' />
+              <input className='form-control teste' value={this.state.cidade} type="text" name='cidade' maxLength={28} required onChange={this.handleChange} onBlur={this.validadeCidade} placeholder='Cidade' />
+              <div className="form-check">
+                <input className="form-check-input" id='radio-casa' type="radio" value='Casa' name='radioButton' onChange={this.handleChange} required />
+                <label className="form-check-label" for="radio-casa">Casa</label>
+              </div>
+              <div className="form-check">
+                <input className="form-check-input" id='radio-apartamento' type="radio" value='Apartamento' name='radioButton' onChange={this.handleChange} required />
+                <label className="form-check-label" for="radio-apartamento">Apartamento</label>
+              </div>
+            </div>
             <select className='form-select' value={this.state.select} name="select" onChange={this.handleChange} required>
               {estados.map((estado) => <option value={estado} key={Math.random()}>{estado}</option>)}
             </select >
-            <div className="form-check">
-              <input className="form-check-input" id='radio-casa' type="radio" value='Casa' name='radioButton' onChange={this.handleChange} required />
-              <label className="form-check-label" for="radio-casa">Casa</label>
-            </div>
-            <div className="form-check">
-              <input className="form-check-input" id='radio-apartamento' type="radio" value='Apartamento' name='radioButton' onChange={this.handleChange} required />
-              <label className="form-check-label" for="radio-apartamento">Apartamento</label>
-            </div>
 
           </fieldset>
           <fieldset style={{ display: this.state.display }}>
