@@ -7,7 +7,7 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <h1>teste</h1>
+        <h1 id='title' className='my-5'>Rosa's Forms</h1>
         <Form />
 
       </>
