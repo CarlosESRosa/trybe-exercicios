@@ -2,7 +2,7 @@ type Character = {
   nickname: string;
   class: string;
   stats: any;
-  createdAt: any;
+  createdAt: Date;
 };
 
 const characters: any = [
