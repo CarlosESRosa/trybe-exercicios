@@ -1,16 +1,16 @@
-enum monthsOfYear {
-  Janeiro,
-  Fevereiro,
-  Março,
-  Abril,
-  Maio,
-  Junho,
-  Julho,
-  Agosto,
-  Setembro,
-  Outubro,
-  Novembro,
-  Dezembro
+enum Months {
+  JANEIRO = "Janeiro",
+  FEVEREIRO = "Fevereiro",
+  MARCO = "Março",
+  ABRIL = "Abril",
+  MAIO = "Maio",
+  JUNHO = "Junho",
+  JULHO = "Julho",
+  AGOSTO = "Agosto",
+  SETEMBRO = "Setembro",
+  OUTUBRO = "Outubro",
+  NOVEMBRO = "Novembro",
+  DEZEMBRO = "Dezembro",
 }
 
-console.log(monthsOfYear[1]);
+export default Months;
