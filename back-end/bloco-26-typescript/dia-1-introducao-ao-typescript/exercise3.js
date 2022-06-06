@@ -1,8 +1,10 @@
-var seasons;
-(function (seasons) {
-    seasons[seasons["Primavera"] = 0] = "Primavera";
-    seasons[seasons["Verao"] = 1] = "Verao";
-    seasons[seasons["Outono"] = 2] = "Outono";
-    seasons[seasons["Inverno"] = 3] = "Inverno";
-})(seasons || (seasons = {}));
-console.log(seasons[1]);
+"use strict";
+exports.__esModule = true;
+var Seasons;
+(function (Seasons) {
+    Seasons["OUTONO"] = "Outono";
+    Seasons["INVERNO"] = "Inverno";
+    Seasons["PRIMAVERA"] = "Primavera";
+    Seasons["VERAO"] = "Ver\u00E3o";
+})(Seasons || (Seasons = {}));
+exports["default"] = Seasons;

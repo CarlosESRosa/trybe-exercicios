@@ -1,8 +1,9 @@
-enum seasons {
-  Primavera,
-  Verao,
-  Outono,
-  Inverno
+enum Seasons {
+  OUTONO = "Outono",
+  INVERNO = "Inverno",
+  PRIMAVERA = "Primavera",
+  VERAO = "Verão",
 }
 
-console.log(seasons[1]);
+
+export default Seasons;
