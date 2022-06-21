@@ -1,5 +1,5 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var Seasons;
 (function (Seasons) {
     Seasons["OUTONO"] = "Outono";
@@ -7,4 +7,4 @@ var Seasons;
     Seasons["PRIMAVERA"] = "Primavera";
     Seasons["VERAO"] = "Ver\u00E3o";
 })(Seasons || (Seasons = {}));
-exports["default"] = Seasons;
+exports.default = Seasons;
